@@ -1,0 +1,101 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: locr_consts.locr_version
+msgid "0.0.1"
+msgstr ""
+
+#: locr_consts.rserrorgetting
+msgid "Error getting image"
+msgstr ""
+
+#: locr_consts.rserrorrecogni
+msgid "Error recognizing file"
+msgstr ""
+
+#: locr_consts.rsnothingselec
+msgid "Nothing selected"
+msgstr ""
+
+#: locr_consts.rsnoworkingima
+msgid "No working image found on the page"
+msgstr ""
+
+#: locr_consts.rspage
+msgctxt "locr_consts.rspage"
+msgid "Page"
+msgstr ""
+
+#: tform1.caption
+msgid "Form1"
+msgstr ""
+
+#: tform1.cblang.text
+msgid "rus"
+msgstr ""
+
+#: tform1.label1.caption
+msgid "Language"
+msgstr ""
+
+#: tform1.label2.caption
+msgid "Engine"
+msgstr ""
+
+#: tform1.maddfromfile.caption
+msgid "Add From File"
+msgstr ""
+
+#: tform1.maddsane.caption
+msgid "Add from SANE"
+msgstr ""
+
+#: tform1.mcutof.caption
+msgid "Cut off"
+msgstr ""
+
+#: tform1.mexit.caption
+msgid "Exit"
+msgstr ""
+
+#: tform1.mfile.caption
+msgid "File"
+msgstr ""
+
+#: tform1.mpage.caption
+msgctxt "tform1.mpage.caption"
+msgid "Page"
+msgstr ""
+
+#: tform1.mrecognize.caption
+msgid "Recognize"
+msgstr ""
+
+#: tform1.mrotateccw.caption
+msgid "Rotate CCW"
+msgstr ""
+
+#: tform1.mrotatecw.caption
+msgid "Rotate CW"
+msgstr ""
+
+#: tform1.msavetext.caption
+msgid "Save All Text as..."
+msgstr ""
+
+#: tform1.radiogroup1.caption
+msgid "RadioGroup1"
+msgstr ""
+
+#: tform1.rbncuneiform.caption
+msgid "cuneiform"
+msgstr ""
+
+#: tform1.rbntesseract.caption
+msgid "tesseract"
+msgstr ""
+
+#: tform1.shsettings.caption
+msgid "ShSettings"
+msgstr ""
+

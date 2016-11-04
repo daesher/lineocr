@@ -1,0 +1,101 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: locr_consts.locr_version
+msgid "0.0.1"
+msgstr "0.0.1"
+
+#: locr_consts.rserrorgetting
+msgid "Error getting image"
+msgstr "Ошибка получения изображения"
+
+#: locr_consts.rserrorrecogni
+msgid "Error recognizing file"
+msgstr "Ошибка распознавания файла"
+
+#: locr_consts.rsnothingselec
+msgid "Nothing selected"
+msgstr "Ничего не выбрано"
+
+#: locr_consts.rsnoworkingima
+msgid "No working image found on the page"
+msgstr ""
+
+#: locr_consts.rspage
+msgctxt "locr_consts.rspage"
+msgid "Page"
+msgstr "Страница"
+
+#: tform1.caption
+msgid "Form1"
+msgstr "Форма"
+
+#: tform1.cblang.text
+msgid "rus"
+msgstr "rus"
+
+#: tform1.label1.caption
+msgid "Language"
+msgstr "Язык"
+
+#: tform1.label2.caption
+msgid "Engine"
+msgstr "Движок"
+
+#: tform1.maddfromfile.caption
+msgid "Add From File"
+msgstr "Добавить из файла"
+
+#: tform1.maddsane.caption
+msgid "Add from SANE"
+msgstr "Добавить из SANE"
+
+#: tform1.mcutof.caption
+msgid "Cut off"
+msgstr "Обрезать по выделению"
+
+#: tform1.mexit.caption
+msgid "Exit"
+msgstr "Выход"
+
+#: tform1.mfile.caption
+msgid "File"
+msgstr "Файл"
+
+#: tform1.mpage.caption
+msgctxt "tform1.mpage.caption"
+msgid "Page"
+msgstr "Страница"
+
+#: tform1.mrecognize.caption
+msgid "Recognize"
+msgstr "Распознать"
+
+#: tform1.mrotateccw.caption
+msgid "Rotate CCW"
+msgstr "Повернуть против часовой стрелки"
+
+#: tform1.mrotatecw.caption
+msgid "Rotate CW"
+msgstr "Повернуть по часовой стрелке"
+
+#: tform1.msavetext.caption
+msgid "Save All Text as..."
+msgstr "Сохранить весь текст как..."
+
+#: tform1.radiogroup1.caption
+msgid "RadioGroup1"
+msgstr ""
+
+#: tform1.rbncuneiform.caption
+msgid "cuneiform"
+msgstr "cuneiform"
+
+#: tform1.rbntesseract.caption
+msgid "tesseract"
+msgstr "tesseract"
+
+#: tform1.shsettings.caption
+msgid "ShSettings"
+msgstr "Настройки"
+
