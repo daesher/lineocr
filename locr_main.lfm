@@ -1,0 +1,203 @@
+object Form1: TForm1
+  Left = 343
+  Height = 441
+  Top = 89
+  Width = 580
+  Caption = 'Form1'
+  ClientHeight = 418
+  ClientWidth = 580
+  Menu = MainMenu
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.7'
+  object Tabs: TPageControl
+    Left = 0
+    Height = 418
+    Top = 0
+    Width = 580
+    ActivePage = ShSettings
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = tpLeft
+    object ShSettings: TTabSheet
+      Caption = 'ShSettings'
+      ClientHeight = 412
+      ClientWidth = 503
+      object Label1: TLabel
+        Left = 16
+        Height = 28
+        Top = 0
+        Width = 99
+        Caption = 'Language'
+        Font.Height = -21
+        ParentColor = False
+        ParentFont = False
+      end
+      object cbLang: TComboBox
+        Left = 152
+        Height = 29
+        Top = 0
+        Width = 100
+        ItemHeight = 0
+        ItemIndex = 0
+        Items.Strings = (
+          'rus'
+          'ruseng'
+          'bul'
+          'cze'
+          'dan '
+          'dut'
+          'eng '
+          'est'
+          'fra'
+          'ger'
+          'hrv '
+          'hun'
+          'ita'
+          'lav'
+          'lit'
+          'pol'
+          'por'
+          'rum'
+          'slv'
+          'spa'
+          'srp'
+          'swe'
+          'tur'
+        )
+        TabOrder = 0
+        Text = 'rus'
+      end
+      object Label2: TLabel
+        Left = 16
+        Height = 25
+        Top = 40
+        Width = 71
+        Caption = 'Engine'
+        Font.Height = -21
+        Font.Name = 'DejaVu Sans'
+        ParentColor = False
+        ParentFont = False
+      end
+      object RadioGroup1: TRadioGroup
+        Left = 109
+        Height = 72
+        Top = 44
+        Width = 115
+        AutoFill = True
+        Caption = 'RadioGroup1'
+        ChildSizing.LeftRightSpacing = 6
+        ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+        ChildSizing.EnlargeVertical = crsHomogenousChildResize
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 1
+        ClientHeight = 54
+        ClientWidth = 113
+        TabOrder = 1
+        object rbnCuneiform: TRadioButton
+          Left = 6
+          Height = 27
+          Top = 0
+          Width = 101
+          Caption = 'cuneiform'
+          Checked = True
+          TabOrder = 1
+          TabStop = True
+        end
+        object rbnTesseract: TRadioButton
+          Left = 6
+          Height = 27
+          Top = 27
+          Width = 101
+          Caption = 'tesseract'
+          TabOrder = 0
+        end
+      end
+      object Image1: TImage
+        Left = 62
+        Height = 141
+        Top = 163
+        Width = 210
+        OnMouseDown = Image1MouseDown
+        OnMouseUp = Image1MouseUp
+      end
+    end
+  end
+  object Process: TProcessUTF8
+    Active = False
+    Options = []
+    Priority = ppNormal
+    StartupOptions = []
+    ShowWindow = swoNone
+    WindowColumns = 0
+    WindowHeight = 0
+    WindowLeft = 0
+    WindowRows = 0
+    WindowTop = 0
+    WindowWidth = 0
+    FillAttribute = 0
+    left = 512
+    top = 24
+  end
+  object MainMenu: TMainMenu
+    left = 528
+    top = 136
+    object mFile: TMenuItem
+      Caption = 'File'
+      object mSaveText: TMenuItem
+        Caption = 'Save All Text as...'
+        OnClick = mSaveTextClick
+      end
+      object mExit: TMenuItem
+        Caption = 'Exit'
+        OnClick = mExitClick
+      end
+    end
+    object mPage: TMenuItem
+      Caption = 'Page'
+      object mAddSane: TMenuItem
+        Caption = 'Add from SANE'
+        OnClick = mAddSaneClick
+      end
+      object mAddFromFile: TMenuItem
+        Caption = 'Add From File'
+        OnClick = mAddFromFileClick
+      end
+      object MenuItem1: TMenuItem
+        Caption = '-'
+      end
+      object mRotateCCW: TMenuItem
+        Caption = 'Rotate CCW'
+        OnClick = mRotateCCWClick
+      end
+      object mRotateCW: TMenuItem
+        Caption = 'Rotate CW'
+        OnClick = mRotateCCWClick
+      end
+      object mCutOf: TMenuItem
+        Caption = 'Cut off'
+        OnClick = mCutOfClick
+      end
+      object MenuItem2: TMenuItem
+        Caption = '-'
+      end
+      object mRecognize: TMenuItem
+        Caption = 'Recognize'
+        OnClick = mRecognizeClick
+      end
+    end
+  end
+  object OpenPictureDialog: TOpenPictureDialog
+    left = 504
+    top = 72
+  end
+  object dSaveAll: TSaveDialog
+    DefaultExt = '.rtf'
+    Filter = 'RTF files|*.rtf'
+    left = 231
+    top = 191
+  end
+end

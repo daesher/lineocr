@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="25">
+      <Unit0>
+        <Filename Value="lineocr.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="23" Y="16"/>
+        <UsageCount Value="43"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="locr_main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="157"/>
+        <CursorPos Y="173"/>
+        <UsageCount Value="43"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="locr_utils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="33"/>
+        <CursorPos X="3" Y="51"/>
+        <UsageCount Value="43"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="locr_consts.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="57" Y="15"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="/usr/lib/fpc/src/packages/fcl-process/src/process.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="110"/>
+        <CursorPos X="14" Y="123"/>
+        <UsageCount Value="9"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="/usr/lib/lazarus/lcl/include/fpimagebitmap.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="118"/>
+        <CursorPos X="39" Y="139"/>
+        <UsageCount Value="9"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="/usr/lib/lazarus/lcl/graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="1487"/>
+        <UsageCount Value="9"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="/usr/lib/fpc/src/packages/fcl-image/src/fpimage.pp"/>
+        <UnitName Value="FPimage"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="133"/>
+        <CursorPos X="17" Y="144"/>
+        <UsageCount Value="9"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="/usr/lib/lazarus/lcl/include/application.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1381"/>
+        <CursorPos Y="1394"/>
+        <UsageCount Value="12"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="/usr/lib/fpc/src/rtl/objpas/sysutils/osutilsh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="20"/>
+        <CursorPos X="18" Y="33"/>
+        <UsageCount Value="9"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="/usr/lib/lazarus/lcl/include/picture.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="731"/>
+        <CursorPos Y="745"/>
+        <UsageCount Value="9"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="/usr/lib/lazarus/components/lazutils/fileutil.pas"/>
+        <UnitName Value="FileUtil"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="47"/>
+        <CursorPos Y="60"/>
+        <UsageCount Value="9"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="/usr/lib/lazarus/components/lazutils/lazfileutils.pas"/>
+        <UnitName Value="LazFileUtils"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="11"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="../richmemo/richmemo.pas"/>
+        <UnitName Value="RichMemo"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="249"/>
+        <CursorPos X="3" Y="269"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="../lazarus/lcl/interfaces/gtk2/gtk2widgetset.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2803"/>
+        <CursorPos X="36" Y="2818"/>
+        <UsageCount Value="9"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="../lazrichview/richview.pas"/>
+        <UnitName Value="RichView"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="28"/>
+        <CursorPos X="3" Y="88"/>
+        <UsageCount Value="9"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="../lazarus/lcl/extctrls.pp"/>
+        <UnitName Value="ExtCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1336"/>
+        <CursorPos X="24" Y="1370"/>
+        <UsageCount Value="10"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="/usr/share/fpcsrc/3.0.0/rtl/inc/varianth.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="491"/>
+        <CursorPos X="10" Y="510"/>
+        <UsageCount Value="9"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="/usr/share/fpcsrc/3.0.0/rtl/inc/systemh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1123"/>
+        <CursorPos X="11" Y="1148"/>
+        <UsageCount Value="11"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="/usr/share/fpcsrc/3.0.0/packages/rtl-objpas/src/inc/strutils.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="313"/>
+        <CursorPos X="10" Y="332"/>
+        <UsageCount Value="9"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="/usr/share/fpcsrc/3.0.0/rtl/objpas/sysutils/sysstrh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="199"/>
+        <CursorPos X="10" Y="218"/>
+        <UsageCount Value="9"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="/usr/share/fpcsrc/3.0.0/rtl/objpas/sysutils/sysstr.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2649"/>
+        <CursorPos X="3" Y="2645"/>
+        <UsageCount Value="9"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="../richmemo/wsrichmemo.pas"/>
+        <UnitName Value="WSRichMemo"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="138"/>
+        <UsageCount Value="10"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="../lazarus/lcl/lclclasses.pp"/>
+        <UnitName Value="LCLClasses"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="../lazarus/lcl/include/customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1865"/>
+        <CursorPos Y="1880"/>
+        <UsageCount Value="10"/>
+      </Unit24>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="147" Column="15" TopLine="128"/>
+      </Position1>
+      <Position2>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="194" Column="21" TopLine="171"/>
+      </Position2>
+      <Position3>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="197" Column="21" TopLine="171"/>
+      </Position3>
+      <Position4>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="271" Column="19" TopLine="244"/>
+      </Position4>
+      <Position5>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="134" TopLine="128"/>
+      </Position5>
+      <Position6>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="135" TopLine="128"/>
+      </Position6>
+      <Position7>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="136" TopLine="128"/>
+      </Position7>
+      <Position8>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="137" TopLine="128"/>
+      </Position8>
+      <Position9>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="138" TopLine="128"/>
+      </Position9>
+      <Position10>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="139" TopLine="128"/>
+      </Position10>
+      <Position11>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="140" TopLine="128"/>
+      </Position11>
+      <Position12>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="136" Column="19" TopLine="128"/>
+      </Position12>
+      <Position13>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="142" TopLine="128"/>
+      </Position13>
+      <Position14>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="134" TopLine="128"/>
+      </Position14>
+      <Position15>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="135" TopLine="128"/>
+      </Position15>
+      <Position16>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="136" TopLine="128"/>
+      </Position16>
+      <Position17>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="137" TopLine="128"/>
+      </Position17>
+      <Position18>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="138" TopLine="128"/>
+      </Position18>
+      <Position19>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="139" TopLine="128"/>
+      </Position19>
+      <Position20>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="140" TopLine="128"/>
+      </Position20>
+      <Position21>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="141" TopLine="128"/>
+      </Position21>
+      <Position22>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="142" TopLine="128"/>
+      </Position22>
+      <Position23>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="143" TopLine="128"/>
+      </Position23>
+      <Position24>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="144" TopLine="128"/>
+      </Position24>
+      <Position25>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="145" TopLine="128"/>
+      </Position25>
+      <Position26>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="146" Column="35" TopLine="128"/>
+      </Position26>
+      <Position27>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="425" Column="33" TopLine="393"/>
+      </Position27>
+      <Position28>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="148" Column="7" TopLine="130"/>
+      </Position28>
+      <Position29>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="149" Column="28" TopLine="139"/>
+      </Position29>
+      <Position30>
+        <Filename Value="locr_main.pas"/>
+        <Caret Line="10" Column="41"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
