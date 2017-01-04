@@ -8,10 +8,19 @@ uses
   Classes, SysUtils, process, FileUtil, UTF8Process, Forms, Controls, Graphics,
   Dialogs, ComCtrls, StdCtrls, Menus, ExtCtrls, ExtDlgs, FPimage,LazFileUtils,
    RichMemo,RichMemoRTF, LConvEncoding,
-  LCLType, DefaultTranslator,
+  LCLType, DefaultTranslator, Buttons,
   locr_utils,locr_consts;
 
 type
+
+  { TMyRichMemo }
+
+  TMyRichMemo=class(TRichMemo)
+  public
+    FChanged:boolean;
+    FOrigRTF:string;
+    constructor Create(AOwner: TComponent); override;
+  end;
 
   { TForm1 }
 
@@ -38,11 +47,19 @@ type
     rbnCuneiform: TRadioButton;
     RadioGroup1: TRadioGroup;
     dSaveAll: TSaveDialog;
+    sbSaveTxt: TSpeedButton;
+    sbAddFromFile: TSpeedButton;
+    sbSANE: TSpeedButton;
+    sbRotateCW: TSpeedButton;
+    sbRotateCCW: TSpeedButton;
+    sbRecognize: TSpeedButton;
     Tabs: TPageControl;
     Process: TProcessUTF8;
     ShSettings: TTabSheet;
+    ToolBar1: TToolBar;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure FormResize(Sender: TObject);
     procedure Image1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure Image1MouseUp(Sender: TObject; Button: TMouseButton;
@@ -61,6 +78,7 @@ type
     RecogElems:TList;
     Bevels:TList;
     X1,X2,Y1,Y2:integer;
+    procedure MChange(Sender:TObject);
   end;
 
 var
@@ -69,6 +87,14 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TMyRichMemo }
+
+constructor TMyRichMemo.Create(AOwner: TComponent);
+begin
+  inherited Create(AOwner);
+  FChanged:=false;
+end;
 
 { TForm1 }
 
@@ -169,7 +195,7 @@ var
   Img: TImage;
   ImgName, RtfName, S: String;
   FS:TFileStream;
-  RM: TRichMemo;
+  RM: TMyRichMemo;
 
   Pg: TTabSheet;
   k, i: Integer;
@@ -214,7 +240,7 @@ begin
         HV.Top:=1;
         HV.Height:=Pg.Height-10;
         HV.LoadFromFile(RtfName);}
-        RM:=TRichMemo.Create(Self);
+        RM:=TMyRichMemo.Create(Self);
         RM.Parent:=Pg;
         RM.Left:=Img.Left+Img.Width+10;
         RM.Width:=Pg.Width-RM.Left-3;
@@ -223,21 +249,25 @@ begin
         SL:=TStringList.Create;
         SL.LoadFromFile(RtfName);
         SL.Text:=CorrectRtf(SL.Text);
+        RM.FOrigRTF:=SL.Text;
         SL.SaveToFile(RtfName);
         SL.Free;
         FS:=TFileStream.Create(RtfName,fmOpenRead);
         RM.LoadRichText(FS);
         FS.Free;
+        RM.OnChange:=@MChange;
         RM.Show;
       end else
       begin
-        RM:=TRichMemo.Create(Self);
+        RM:=TMyRichMemo.Create(Self);
         RM.Parent:=Pg;
         RM.Left:=Img.Left+Img.Width+10;
         RM.Width:=Pg.Width-RM.Left-3;
         RM.Top:=1;
         RM.Height:=Pg.Height-10;
         RM.Lines.LoadFromFile(RtfName);
+        RM.FOrigRTF:=RM.Lines.Text;
+        RM.OnChange:=@MChange;
         RM.Show;
       end;
       i:=Tabs.PageIndex-1;
@@ -264,8 +294,8 @@ begin
     exit;
   end;
   Img:=TImage(O);
-  if Sender=mRotateCCW then Angle:='-90' else
-      if Sender=mRotateCW then Angle:='90';
+  if (Sender=mRotateCCW)or(Sender=sbRotateCCW) then Angle:='-90' else
+      if (Sender=mRotateCW)or(Sender=sbRotateCW) then Angle:='90';
   try
     FileName:=GetTempFileByExt('img','png');
     Img.Picture.SaveToFile(FileName);
@@ -286,7 +316,7 @@ end;
 procedure TForm1.mSaveTextClick(Sender: TObject);
 var
   i, N, j: Integer;
-  RM: TRichMemo;
+  RM: TMyRichMemo;
   FS: TFileStream;
   S, All: String;
   SL: TStringList;
@@ -295,10 +325,10 @@ begin
   N:=RecogElems.Count-1;
   All:='';
   for i:=0 to N do
-    if (RecogElems[i]<>nil)and(TObject(RecogElems[i]) is TRichMemo) then
+    if (RecogElems[i]<>nil)and(TObject(RecogElems[i]) is TMyRichMemo) then
     begin
-      RM:=TRichMemo(RecogElems[i]);
-      S:=RM.Rtf;
+      RM:=TMyRichMemo(RecogElems[i]);
+      if RM.FChanged then S:=RM.Rtf else S:=RM.FOrigRTF;
       if i>0 then
       begin
         j:=1;
@@ -316,6 +346,11 @@ begin
   SL:=TStringList.Create;
   SL.Text:=All;
   SL.SaveToFile(dSaveAll.FileName);
+end;
+
+procedure TForm1.MChange(Sender: TObject);
+begin
+  if Sender is TMyRichMemo then TMyRichMemo(Sender).FChanged:=true;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
@@ -356,6 +391,31 @@ begin
     end;          }
   RecogElems.Free;
   Bevels.Free;
+end;
+
+procedure TForm1.FormResize(Sender: TObject);
+var
+  i: Integer;
+  Img: TImage;
+  CPage: TTabSheet;
+  RM: TControl;
+begin
+  for i:=1 to Tabs.PageCount-1 do
+  begin
+    CPage:=Tabs.Pages[i];
+    if (Imgs.Count>=i) and assigned(Imgs[i-1]) and (TObject(Imgs[i-1])is TImage) then
+      Img:=TImage(Imgs[i-1]) else continue;
+    Img.Left:=0;Img.Top:=0;
+    Img.Height:=CPage.Height-20;
+    Img.Width:=(CPage.Width div 2)-10;
+    if (RecogElems.Count>=i)and assigned(RecogElems[i-1]) and (TObject(RecogElems[i-1])is TControl) then
+      RM:=TControl(RecogElems[i-1]) else continue;
+      RM.Left:=Img.Left+Img.Width+10;
+      RM.Width:=CPage.Width-RM.Left-3;
+      RM.Top:=1;
+      RM.Height:=CPage.Height-10;
+  end;
+
 end;
 
 procedure TForm1.Image1MouseDown(Sender: TObject; Button: TMouseButton;
@@ -408,7 +468,7 @@ var
 begin
   if not OpenPictureDialog.Execute then exit;
   CPage:=Tabs.AddTabSheet;
-  CPage.Caption:=rsPage;
+  CPage.Caption:=rsPage+' '+IntToStr(Tabs.PageCount-1);
   Btn:=TButton.Create(self);
   btn.Caption:='Button';
   Btn.Parent:=CPage;
